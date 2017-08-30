@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="mushApp">
+<head>
+    <meta charset="utf-8">
+    <title>Testing</title>
+</head>
+
+<body ng-controller="MushroomController">
+    <h1>Testing</h1>
+    <div>
+        <input type="text" ng-model="searchText">
+        <input type="radio" ng-model="edibility" value=true> Edible
+        <input type="radio" ng-model="edibility" value=false> Inedible
+    </div>
+
+    <ng-include src="'partial.html'"></ng-include>
+
+    <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="lib/node_modules/angular/angular.js"></script>
+    <script src="controller.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCU1zYPsS2YoWLyVLa4uQ9wW_f09Oqfom0",
+            authDomain: "cupcake-firebase-demo.firebaseapp.com",
+            databaseURL: "https://cupcake-firebase-demo.firebaseio.com",
+            projectId: "cupcake-firebase-demo",
+            storageBucket: "cupcake-firebase-demo.appspot.com",
+            messagingSenderId: "561542076786"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+</body>
+
+</html>
